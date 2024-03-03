@@ -1,3 +1,4 @@
+
 # Windows thumbnail cache files
 Thumbs.db
 ehthumbs.db
@@ -36,3 +37,8 @@ build
 .vscode/settings.json
 .vscode/c_cpp_properties.json
 *.code-workspace
+
+
+#===============
+ä STM32CubeIDE build dir
+Debug\ F411\ Blackpill/
