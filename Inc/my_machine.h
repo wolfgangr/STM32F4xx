@@ -101,7 +101,7 @@
 //#define EEPROM_IS_FRAM       1 // Uncomment when EEPROM is enabled and chip is FRAM, this to remove write delay.
 //#define SPINDLE_SYNC_ENABLE  1 // Enable spindle sync support (G33, G76). !! NOTE: Alpha quality - enable only for test or verification.
                                  // Currently available for BOARD_PROTONEER_3XX, BOARD_BLACKPILL*, BOARD_MORPHO_CNC and BOARD_STM32F401_UNI.
-//#define ESTOP_ENABLE         0 // When enabled only real-time report requests will be executed when the reset pin is asserted.
+#define ESTOP_ENABLE         0 // When enabled only real-time report requests will be executed when the reset pin is asserted.
                                  // Note: if left commented out the default setting is determined from COMPATIBILITY_LEVEL.
 //#define MCP3221_ENABLE    0x4D // Enable MCP3221 I2C ADC input with address 0x4D (0b01001101).
 
@@ -120,6 +120,7 @@
 
 /**/
 
+#define N_AXIS 3
 // If the selected board map supports more than three motors ganging and/or auto-squaring
 // of axes can be enabled here.
 //#define X_GANGED            1
