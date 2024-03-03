@@ -28,7 +28,7 @@
 //#define BOARD_MORPHO_CNC          // For use with Nucleo-F411RE and F446RE boards. Work in progress.
 //#define BOARD_MORPHO_DAC_CNC      // For use with F446RE boards and a 32-bit I2S stereo DAC for X and Y output. **EXPERIMENTAL**
 //#define BOARD_BLACKPILL           // For use with F411 BlackPill, with optional auto square support for one axis
-//#define BOARD_BLACKPILL_ALT2      // For use with F411 BlackPill, with optional auto square support for one axis, I2C and spindle sync
+#define BOARD_BLACKPILL_ALT2      // For use with F411 BlackPill, with optional auto square support for one axis, I2C and spindle sync
 //#define BOARD_DEVTRONIC_CNC       // For use with Devtronic CNC Controller (F411 BlackPill), with I2C and spindle sync
 //#define BOARD_MINI_BLACKPILL      // For use with F411 BlackPill, https://github.com/avizienis/Minimal-Black-Pill--STM32F4xx-BOB-for-grblHAL
 //#define BOARD_BTT_SKR_PRO_1_1     // F407 based 3D Printer board
@@ -68,7 +68,7 @@
 // Spindle definitions can be found in grbl/spindle_control.h.
 // More here https://github.com/grblHAL/Plugins_spindle
 //#define SPINDLE0_ENABLE      SPINDLE_ALL
-//#define SPINDLE0_ENABLE      SPINDLE_PWM0_NODIR
+#define SPINDLE0_ENABLE      SPINDLE_PWM0_NODIR
 //#define SPINDLE2_ENABLE      SPINDLE_NONE
 //#define SPINDLE3_ENABLE      SPINDLE_NONE
 // **********************
@@ -108,7 +108,7 @@
 // Optional control signals:
 // These will be assigned to aux input pins. Use the $pins command to check which pins are assigned.
 // NOTE: If not enough pins are available assignment will silently fail.
-//#define PROBE_ENABLE            0 // Default enabled, remove comment to disable probe input.
+#define PROBE_ENABLE            0 // Default enabled, remove comment to disable probe input.
 //#define SAFETY_DOOR_ENABLE      1
 //#define MOTOR_FAULT_ENABLE      1
 //#define MOTOR_WARNING_ENABLE    1
@@ -119,13 +119,14 @@
 //#define LIMITS_OVERRIDE_ENABLE  1
 
 /**/
+
 // If the selected board map supports more than three motors ganging and/or auto-squaring
 // of axes can be enabled here.
 //#define X_GANGED            1
 //#define X_AUTO_SQUARE       1
 //#define Y_GANGED            1
-//#define Y_AUTO_SQUARE       1
-//#define Z_GANGED            1
+#define Y_AUTO_SQUARE       1
+// #define Z_GANGED            1
 //#define Z_AUTO_SQUARE       1
 // For ganged axes the limit switch input (if available) can be configured to act as a max travel limit switch.
 // NOTE: If board map already has max limit inputs defined this configuration will be ignored.
